@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+<title>
+javascript animation
+</title>
+<style>
+#ad-two{
+	width:560px;
+	height:200px;
+	box-shadow:0px 0px 5px gray;
+	overflow:hidden;
+}
+#image-two{
+	width:380px;
+	height:100%;
+	position:relative;
+	margin-left:-380px;
+	float:left;
+}
+.animation-img-two{
+	-webkit-animation:girls 5s infinite;
+	-o-animation:girls 5s infinite;
+	-moz-animation:girls 5s infinite;
+	animation:girls 5s infinite;
+}
+@keyframes girls{
+	0%{top:0;left:0px;}
+	20%{top:0;left:380px;}
+	100%{top:0;left:380px;}
+}
+h2{
+	padding:0;
+	margin:0;
+	float:right;
+	font-family:sans-serif;
+	color:green;
+	margin-top:-70px;
+	margin-right:25px;
+	position:relative;
+}
+.head-two-animation{
+	-webkit-animation:head-two 5s infinite;
+	-o-animation:head-two 5s infinite;
+	-moz-animation:head-two 5s infinite;
+	animation:head-two 5s infinite;
+	animation-delay:1s;
+}
+@keyframes head-two{
+	0%{top:0px;left:0px;}
+	25%{top:90px;left:0px;}
+	100%{top:90px;left:0px;}
+}
+h3{
+	padding:0;
+	margin:0;
+	float:right;
+	color:red;
+	clear:right;
+	margin-right:-150px;
+	margin-top:60px;
+	font-family:cursive;
+	position:relative;
+}
+.head-three-animation{
+	-webkit-animation:head-three 5s infinite;
+	-o-animation:head-three 5s infinite;
+	-moz-animation:head-three 5s infinite;
+	animation:head-three 5s infinite;
+	animation-delay:2s;
+}
+@keyframes head-three{
+	0%{top:0;left:0;}
+	30%{top:0;left:-185px;}
+	100%{top:0;left:-185px;}
+}
+p{
+	position:relative;
+	margin-left:395px;
+	margin-top:195px;
+	font-family:cursive;
+	color:red;
+	font-weight:bold;
+}
+.para-animation{
+	-webkit-animation:paragraph 5s infinite;
+	-o-animation:paragraph 5s infinite;
+	-moz-animation:paragraph 5s infinite;
+	animation:paragraph 5s infinite;
+	animation-delay:3s;
+}
+@keyframes paragraph{
+	0%{top:0;left:0;}
+	35%{top:-100px;left:0;}
+	100%{top:-100px;left:0;}
+}
+</style>
+</head>
+<body>
+<div id="ad-two">
+<img src="images/shoping_pic.jpg" id="image-two"/>
+<h2 id="heading">Fashion Mall</h2>
+<h3 id="discount">50% Discount</h3>
+<p id="delivery">Free Home Delivery<br>
+Returne policy<br>
+Real Product</p>
+</div>
+<script>
+var a = document.getElementById("image-two");
+a.setAttribute("class","animation-img-two");
+
+var b = document.getElementById("heading");
+b.setAttribute("class","head-two-animation");
+
+var c = document.getElementById("discount");
+c.setAttribute("class","head-three-animation");
+
+var d = document.getElementById("delivery");
+d.setAttribute("class","para-animation");
+</script>
+</body>
+</html>
+
+

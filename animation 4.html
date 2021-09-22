@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+<title>
+javascript animation
+</title>
+<style>
+#ad-four{
+	width:750px;
+	height:450px;
+	box-shadow:0px 0px 5px gray;
+	text-align:center;
+	margin:50px auto;
+	overflow:hidden;
+}
+#head-four{
+	padding:0;
+	margin:0;
+	font-family:sans-serif;
+	font-size:50px;
+	position:relative;
+	top:10px;
+}
+.heading-fixed{
+	-webkit-animation:color-animation 6s infinite;
+	-o-animation:color-animation 6s infinite;
+	-moz-animation:color-animation 6s infinite;
+	animation:color-animation 6s infinite;
+}
+@keyframes color-animation{
+	0%{color:#0167C1;}
+	49%{color:#0167C1;}
+	50%{color:white;}
+	100%{color:white;}
+}
+#ad-four-image{
+	width:300px;
+	height:200px;
+	margin-top:30px;
+	position:relative;
+}
+.imagenot{
+	animation:rotate-animation 3s infinite;
+}
+@keyframes rotate-animation{
+	0%{top:0;left:0;}
+	20%{top:0px;left:-100px;width:300px;height:200px;transform:rotate(0deg);}
+	40%{top:0;left:0;width:500px;height:400px;transform:rotate(0deg);}
+	80%{top:0;left:0;width:500px;height:400px;transform:rotate(360deg);}
+}
+h1{
+padding:0;
+margin:0;
+font-size:70px;
+color:green;
+}
+</style>
+</head>
+<body>
+<div id="ad-four">
+<h2 id="head-four">Exclusive Cosmatic Products</h2>
+<img src="images/cosmatic_one.jpg" id="ad-four-image">
+<h1>Flipkart.Com</h1>
+</div>
+<script>
+var x = document.getElementById("head-four");
+x.setAttribute("class","heading-fixed");
+
+var y = document.getElementById("ad-four-image");
+y.setAttribute("class","imagenot");
+</script>
+</body>
+</html>
+
+

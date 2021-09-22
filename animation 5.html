@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+<title>
+javascript animation
+</title>
+<style>
+#ad-five{
+	width:370px;
+	height:180px;
+	box-shadow:0px 0px 5px gray;
+	margin:50px auto;
+	text-align:center;
+	overflow:hidden;
+}
+#cow{
+	width:370px;
+	height:180px;
+	position:relative;
+}
+.cow-cla{
+	animation:cow-img 6s infinite;
+}
+@keyframes cow-img{
+	0%{top:0; left:0;}
+	20%{top:0;left:-370px;}
+	85%{top:0; left:-370px;}
+	90%{top:0; left:0;}
+	100%{top:0; left:0;}
+}
+#text{
+	position:relative;
+	padding:0;
+	margin:0;
+	font-size:15px;
+	color:blue;
+}
+.text-animation{
+	animation:text-ani 6s infinite;
+	animation-delay:1s;
+}
+@keyframes text-ani{
+	0%{top:0;left:0;font-size:15px;}
+	25%{top:-105px;left:0;font-size:15px;color:blue;}
+	50%{top:-105px;left:0;font-size:35px;color:red;}
+	55%{top:-105px;left:0;font-size:15px;color:blue;}
+	60%{top:0;left:0;font-size:15px;}
+	100%{top:0;left:0;font-size:15px;}
+}
+</style>
+</head>
+<body>
+<div id="ad-five">
+<img src="images/cow_one.png" id="cow" />
+<h1 id="text">Shubham Milk Parlor</h1>
+</div>
+<script>
+var x = document.getElementById("cow");
+x.setAttribute("class","cow-cla");
+
+var y = document.getElementById("text");
+y.setAttribute("class","text-animation");
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="en-US">
+	<meta charset="utf-8">
+<title>
+javascript animation
+</title>
+<style>
+#ad-one{
+	width:550px;
+	height:190px;
+	box-shadow:0px 0px 5px gray;
+	text-align:center;
+	overflow: hidden;
+}
+#ad-one-head{
+	padding:0;
+	margin:0;
+	position:relative;
+	margin-top:10px;
+}
+.animation-header-one{
+	-webkit-animation:one-ani-one 3s infinite;
+	-o-animation:one-ani-one 3s infinite;
+	-moz-animation:one-ani-one 3s infinite;
+	animation:one-ani-one 3s infinite;
+	animation-delay:1.4s
+}
+@keyframes one-ani-one{
+	0%{top:0;left:0;}
+	25%{top:-50px;left:0;}
+	50%{top:0;left:0;}
+}
+#image-one{
+	width:510px;
+	height:140px;
+	position:relative;
+	margin-top:20px;
+}
+.animation-img-one{
+	-webkit-animation:one-ani-two 3s infinite;
+	-o-animation:one-ani-two 3s infinite;
+	-moz-animation:one-ani-two 3s infinite;
+	animation:one-ani-two 3s infinite;
+}
+@keyframes one-ani-two{
+0%{top:0;left:0;}
+25%{top:30px;left:0;height:120px;}
+50%{top:-30px;left:0;}
+100%{top:0px;left:0;}
+}
+</style>
+</head>
+<body>
+<div id="ad-one">
+<h1 id="ad-one-head">KIDS CARE PREP SCHOOL</h1>
+<img src="images/student_three.png" id="image-one"/>
+</div>
+<script>
+var a = document.getElementById("image-one");
+a.setAttribute("class","animation-img-one");
+var b = document.getElementById("ad-one-head");
+b.setAttribute("class","animation-header-one");
+</script>
+</body>
+</html>
+
+
